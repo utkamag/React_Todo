@@ -1,0 +1,30 @@
+
+/* App */
+
+.App {
+    text-align: center;
+}
+
+
+/* Container */
+
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* App Title */
+
+.App_title {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: "Courier New";
+
+}
+
+/* Input */
+
+.Input {
+    width: 40vw;
+}
