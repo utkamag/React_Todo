@@ -1,9 +1,14 @@
 import React from 'react';
 
-const ListTodo = () => {
+const ListTodo = ( {value} ) => {
     return (
         <div className="container">
-
+            {value.map((val) => {
+                return(
+                    <div>{val}</div>
+                )
+                }
+            )}
         </div>
     );
 };
