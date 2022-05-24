@@ -1,4 +1,6 @@
 import {createStore} from "react-redux";
 
-export const store = createStore()
+
+
+export const store = createStore(DataReducer)
 
