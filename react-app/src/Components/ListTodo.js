@@ -1,14 +1,15 @@
 import React from 'react';
+import {useSelector} from "react-redux";
 
-const ListTodo = ( {value} ) => {
+const ListTodo = () => {
+
+    //Используем хук для получения данных со Store
+
+    const data = useSelector(state => state.data)
+
     return (
         <div className="container">
-            {value.map((val) => {
-                return(
-                    <div>{val}</div>
-                )
-                }
-            )}
+            {data}
         </div>
     );
 };

@@ -1,6 +1,10 @@
-import {createStore} from "react-redux";
+
+import { legacy_createStore as createStore} from "redux";
+import {reducer} from "./DataReducer";
 
 
 
-export const store = createStore(DataReducer)
+//Глобальный store
 
+
+export const store = createStore(reducer)

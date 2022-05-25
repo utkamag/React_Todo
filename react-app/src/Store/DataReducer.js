@@ -2,16 +2,20 @@
 
 // Базовое состояние
 
-const deafultstate = {
-    data: []
+const deafultState = {
+    data: 0,
 }
+
+//Константа
+
+const ADD_DATA = "ADD_DATA"
 
 //Редьюсер
 
-export const reducer = (state = deafultstate, action) => {
-    switch (action.type){
-        case "ADD_DATA":
-            return {...state, data: action.payload}
+export const reducer = (state = deafultState, action) => {
+    switch (action.type) {
+        case ADD_DATA:
+            return {data: state.data + action.payload}
         default:
             return state
     }
@@ -19,3 +23,4 @@ export const reducer = (state = deafultstate, action) => {
 
 //Action creator
 
+export const addDataAction = (payload) => ({type: ADD_DATA, payload})
