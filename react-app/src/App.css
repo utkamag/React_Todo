@@ -28,3 +28,9 @@
 .Input {
     width: 40vw;
 }
+
+/* ListTodo */
+
+.ListTodo {
+    padding: 20px;
+}

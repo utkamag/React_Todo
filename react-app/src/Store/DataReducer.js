@@ -3,7 +3,7 @@
 // Базовое состояние
 
 const deafultState = {
-    data: 0,
+    data: []
 }
 
 //Константа
@@ -15,7 +15,7 @@ const ADD_DATA = "ADD_DATA"
 export const reducer = (state = deafultState, action) => {
     switch (action.type) {
         case ADD_DATA:
-            return {data: state.data + action.payload}
+            return {...state, data: [...state.data, action.payload]}
         default:
             return state
     }

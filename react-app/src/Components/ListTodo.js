@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector} from "react-redux";
+import {ListItem, List, Container} from "@mui/material";
 
 const ListTodo = () => {
 
@@ -9,7 +10,13 @@ const ListTodo = () => {
 
     return (
         <div className="container">
-            {data}
+            {data.map((item) => {
+                return (
+                    <List className="ListTodo">
+                           {item.value + item.id}
+                    </List>
+                )
+            })}
         </div>
     );
 };

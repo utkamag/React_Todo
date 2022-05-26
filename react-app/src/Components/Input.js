@@ -8,9 +8,27 @@ const Input = ( {saveToDo} ) => {
     //Store
 
     const dispatch = useDispatch()
+
+    //Submit
     
-    const click1 = () => {
-      dispatch(addDataAction(2))
+    const click1 = (e) => {
+        e.preventDefault()
+
+        //Если данное поле после заполнения останется пустым, выйдет ошибка
+
+        if (value == []){
+            setError(true)
+        }
+        else {
+            setError(false)
+        }
+
+        const tests = {
+            value,
+            id: Date.now(),
+        }
+
+        dispatch(addDataAction(tests))
     }
 
     // State инпута
@@ -27,25 +45,12 @@ const Input = ( {saveToDo} ) => {
         setValue(e.target.value)
     }
 
-    //Submit
-
-    const onSubmit = (e) => {
-        e.preventDefault()
-        if (value === []){
-            setError(true)
-        }
-        else {
-            setError(false)
-        }
-        console.log(value)}
-
 
     return (
         <div className="Container">
-            <form onSubmit={onSubmit}>
+            <form onSubmit={click1}>
                 <TextField onChange={handleChange} className="Input" variant="outlined" label="Добавить задачу" error={error}/>
             </form>
-            <button onClick={click1}>123</button>
         </div>
     );
 };
