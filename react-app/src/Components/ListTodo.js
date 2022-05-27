@@ -1,8 +1,15 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import {ListItem, List, Container} from "@mui/material";
+import {removeDataAction} from "../Store/DataReducer";
 
 const ListTodo = () => {
+
+    //Удаляем данные с массива (dispatch)
+
+    const click2 = (item) => {
+        removeDataAction(item.id)
+    }
 
     //Используем хук для получения данных со Store
 
@@ -12,9 +19,9 @@ const ListTodo = () => {
         <div className="container">
             {data.map((item) => {
                 return (
-                    <List className="ListTodo">
-                           {item.value + item.id}
-                    </List>
+                    <div key={item.id} onClick={() => click2(item)} className="ListTodo">
+                           {item.value}
+                    </div>
                 )
             })}
         </div>
