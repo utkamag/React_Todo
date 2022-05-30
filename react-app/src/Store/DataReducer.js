@@ -22,7 +22,7 @@ export const reducer = (state = defaultState, action) => {
         default:
             return state
     }
-}   
+}
 
 //Action creator
 
