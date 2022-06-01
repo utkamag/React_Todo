@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {ListItem, List, Container, Switch} from "@mui/material";
 import {removeDataAction} from "../Store/DataReducer";
+import HomeIcon from '@mui/material/Icon';
+
 
 const ListTodo = () => {
 
@@ -21,16 +22,16 @@ const ListTodo = () => {
 
     return (
         <div className="container">
-
             {data.length > 0 ? (
                 data.map((item) => {
-                        return (
-                            <div key={item.id} onClick={() => click2(item)} className="listToDo">
-                                {item.value}
-                            </div>
-                        )
-                    })
-                ) : (
+                    return (
+                        <div key={item.id} onClick={() => click2(item)} className="listToDo">
+                            {item.value}
+                            <HomeIcon/>
+                        </div>
+                    )
+                })
+            ) : (
                 <div className="listToDo_Tasks">Задачи отсутствуют</div>
             )}
         </div>
