@@ -12,6 +12,7 @@ const Input = ( {saveToDo} ) => {
     //Submit (Добавляем данные в массив) dispatch
     
     const addData = (e) => {
+
         e.preventDefault()
 
         //Если данное поле после заполнения останется пустым, выйдет ошибка
@@ -27,7 +28,7 @@ const Input = ( {saveToDo} ) => {
             value,
             id: Date.now(),
         }
-
+        
         dispatch(addDataAction(tests))
     }
 
