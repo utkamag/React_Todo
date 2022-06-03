@@ -20,7 +20,7 @@ const persistedReducer = persistReducer(persistConfig, reducer)
 
 export const store = createStore(persistedReducer)
 
-// Persister
+// Persister, передаем store
 
 export const persistor = persistStore(store)
 
