@@ -28,7 +28,7 @@ const Input = ( {saveToDo} ) => {
             value,
             id: Date.now(),
         }
-        
+
         dispatch(addDataAction(tests))
     }
 
