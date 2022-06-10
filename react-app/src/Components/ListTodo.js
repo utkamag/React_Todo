@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {removeDataAction} from "../Store/DataReducer";
-import HomeIcon from '@mui/material/Icon';
+import ReactSVG from '../assets/IMG/cloud-done-svgrepo-com.svg'
 
 
 const ListTodo = () => {
@@ -25,14 +25,17 @@ const ListTodo = () => {
             {data.length > 0 ? (
                 data.map((item) => {
                     return (
-                        <div key={item.id} onClick={() => click2(item)} className="listToDo">
-                            {item.value}
-                            <HomeIcon/>
-                        </div>
+                            <div key={item.id} onClick={() => click2(item)} className="listToDo">
+                                {item.value}
+
+                            </div>
                     )
                 })
             ) : (
-                <div className="listToDo_Tasks">Задачи отсутствуют</div>
+                <div className="listToDo_Tasks">
+                    <span>Задачи отсутствуют</span>
+                    <img className="listToDo_Tasks_Img" src={ReactSVG} alt="test"/>
+                </div>
             )}
         </div>
     );

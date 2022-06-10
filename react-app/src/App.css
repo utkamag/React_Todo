@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /* App Title */
@@ -33,5 +34,12 @@
 /* ListTodo */
 
 .listToDo, .listToDo_Tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+}
+
+.listToDo_Tasks_Img {
+    padding: 7px;
 }
