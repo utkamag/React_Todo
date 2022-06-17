@@ -43,3 +43,20 @@
 .listToDo_Tasks_Img {
     padding: 7px;
 }
+
+/* GitHub */
+
+.gitHub {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 0;
+    width: 100vw;
+}
+
+.gitHub_text {
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+}
