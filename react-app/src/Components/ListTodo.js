@@ -16,7 +16,7 @@ const ListTodo = () => {
         dispatch(removeDataAction(item.id))
     }
 
-    //Используем хук для получения данных со Store
+    //Используем хук для получения данных сo Store
 
     const data = useSelector(state => state.data)
 
